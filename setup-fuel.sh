@@ -30,6 +30,9 @@ mv MirantisOpenStack-9.0.iso iso/
 # Install Mirantis pre-reqs
 yum install -y expect
 
+# enable headless mode
+sed -i 's/headless=.*/headless=1/g' config.sh
+
 
 
 
