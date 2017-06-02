@@ -4,21 +4,44 @@
 ## Overview
 
 
+## Prerequisites
+
+For this lab, you'll need a desktop/labtop (Windows, Mac, or Linux) with an SSH client and a web browser.
+
+You can download PuTTY, an SSH client for Windows at:
+
+https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
+
+Install the Windows package since you'll need one of the PuTTY utilities (putty and puttygen).
+
 ## Bare Metal Service Account
 
 For this workshop, you'll be using physical servers provided by Packet. Specifically, you'll be using one of their 'Type 1' servers, a 32 GB, 120GB x 2 SSD (RAID-1), 4 core Xeon server. Packet provides their servers by the hour. With code SDOPENSTACK, you'll get $25 of free credit. The 'Type 1' is $0.40/hour so the $25 credit will get you 62 hours of CPU use. Be sure to shut down the server at the end of the workshop!
 
-Sign up at www.packet.net and use code SDOPENSTACK. You'll need to provide a credit card or PayPal account in case you go past the $25 in credit.
+Sign up at www.packet.net and use code SDOPENSTACK. You'll need to provide a credit card or PayPal account to get the $25 in free credit.
 
 ## Startup a Bare Metal Server
 
-Manage->Create Project->
+Packet has instructions on how to startup your first server. 
+You'll want to deploy a 'Type 1' server. Pick whichever region you'd like (New Jersey or California).
 
-Just down the Bare Metal Server IP address.
+https://help.packet.net/quick-start/deploy-a-server
+
+If you are connecting from a Windows machine, follow the instructions under "Create an SSH Key Pair" to generate an SSH key:
+
+https://www.digitalocean.com/community/tutorials/how-to-use-ssh-keys-with-putty-on-digitalocean-droplets-windows-users
+
+Make sure you upload your new key into Packet before you start the server!
+
+It'll take about 8 minutes for the new server to start up.
 
 ## Log into the Bare Metal Server
 
+Using PuTTY (Windows) or ssh (Mac/Linux), connect to the new bare metal, physical server that was deployed. Refer to step #5 in the Packet guide above if you need help.
 
+When connecting using PuTTY, you'll need to login using the SSH key you generated. See "Setting Up an SSH Session with SSH Keys in PuTTY" in the following guide:
+
+https://www.digitalocean.com/community/tutorials/how-to-use-ssh-keys-with-putty-on-digitalocean-droplets-windows-users
 
 ## Download and Run Install Scripts
 
