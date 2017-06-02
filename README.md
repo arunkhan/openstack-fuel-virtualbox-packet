@@ -14,18 +14,45 @@ Sign up at www.packet.net and use code SDOPENSTACK. You'll need to provide a cre
 
 Manage->Create Project->
 
-## Download Install Scripts
+Just down the Bare Metal Server IP address.
+
+## Log into the Bare Metal Server
 
 
-## Run Install Scripts
 
+## Download and Run Install Scripts
+
+yum -y install git
+git clone https://github.com/OpenStackSanDiego/openstack-fuel-virtualbox-packet
+cd openstack-fuel-virtualbox-packet
+sh setup-fuel.sh
 
 ## Startup Fuel Servers
 
+This will launch 5 nodes
+
+sh launch_16GB.sh
 
 ## Log into Fuel
 
+sh enable-port-forwarding.sh 
 
+Log into the Fuel console at:
+http://147.75.108.181:8001
+
+Login with admin/admin.
+
+## Use Fuel to setup your first OpenStack cloud
+
+From here you can proceed with the cloud installation instructions available at:
+
+https://docs.openstack.org/developer/fuel-docs/userdocs/fuel-user-guide.html
+
+Your first steps will be to assign node roles.
 
 ## Shutting it all down
+
+From the Packet Application website, select the bare metal server and mark it for deletion.
+
+You are welcome to keep the server running but remember that you will keep being charged until you shut it down.
 
