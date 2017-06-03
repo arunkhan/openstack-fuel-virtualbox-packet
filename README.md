@@ -81,5 +81,5 @@ Your first steps will be to assign node roles.
 
 From the Packet Application website, select the bare metal server and mark it for deletion.
 
-You are welcome to keep the server running but remember that you will keep being charged until you shut it down.
+You are welcome to keep the server running but remember that you will keep being charged until you delete it via the Packet web app.
 
