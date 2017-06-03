@@ -27,9 +27,9 @@ You'll want to deploy a 'Type 1' server. Pick whichever region you'd like (New J
 
 https://help.packet.net/quick-start/deploy-a-server
 
-If you are connecting from a Windows machine, follow the instructions under "Create an SSH Key Pair" to generate an SSH key:
+If you are connecting from a Windows machine, you can use these instructions on how to generate SSH keys.
 
-https://www.digitalocean.com/community/tutorials/how-to-use-ssh-keys-with-putty-on-digitalocean-droplets-windows-users
+https://help.packet.net/quick-start/generate-ssh-keys
 
 Make sure you upload your new key into Packet before you start the server!
 
@@ -39,9 +39,13 @@ It'll take about 8 minutes for the new server to start up.
 
 Using PuTTY (Windows) or ssh (Mac/Linux), connect to the new bare metal, physical server that was deployed. Refer to step #5 in the Packet guide above if you need help.
 
-When connecting using PuTTY, you'll need to login using the SSH key you generated. See "Setting Up an SSH Session with SSH Keys in PuTTY" in the following guide:
+When connecting using PuTTY on Windows, you'll need to login using the SSH key you generated.
 
-https://www.digitalocean.com/community/tutorials/how-to-use-ssh-keys-with-putty-on-digitalocean-droplets-windows-users
+* Click Connection > Data in the left-hand navigation pane and set the Auto-login username to root.
+
+* Click Connection > SSH > Auth in the left-hand navigation pane and configure the private key to use by clicking Browse under Private key file for authentication.
+
+Navigate to the location where you saved your private key earlier, select the file, and click Open.* 
 
 ## Download and Run Install Scripts
 
