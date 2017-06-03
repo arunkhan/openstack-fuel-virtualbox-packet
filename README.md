@@ -5,26 +5,20 @@
 
 Starting up an OpenStack private cloud can be difficult from getting all the necessary hardware, setting up the physical networking, and installing/configuring the software. To simplify the steps and get you up and running with your first cloud, we've put together this workshop. This workshop deploys a multi-node OpenStack cloud upon VirtualBox using Mirantis Fuel. 
 
-
-``|                                   | OpenStack VM-1 | -2 | -3 | -4 |``
-
-``                  ---------------------------------------------------``
-
-``|                 | OpenStack Ctrl  | OpenStack Compute-1 | -2 | -3 |``
-
-``---------------------------------------------------------------------``
-
-``|  Fuel-master VM | Fuel-slave-1 VM | Fuel-slave-2 VM     | -3 | +4 |``
-
-``---------------------------------------------------------------------``
-
-``|                  VirtualBox Hypervisor                            |``
-
-``---------------------------------------------------------------------``
-
-``|            Bare Metal Server 3GB, 120TB, 4 core Xeon              |``
-
-``|                        CentOS 7                                   |``
++-------+----------+------+
+| Table Headings   | Here |
++-------+----------+------+
+| Sub   | Headings | Too  |
++=======+==========+======+
+| cell  | column spanning |
++ spans +----------+------+
+| rows  | normal   | cell |
++-------+----------+------+
+| multi | * cells can be  |
+| line  | * formatted     |
+| cells | * paragraphs    |
+| too   |                 |
++-------+-----------------+
 
 
 ## Prerequisites
