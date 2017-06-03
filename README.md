@@ -3,7 +3,20 @@
 
 ## Overview
 
+Starting up an OpenStack private cloud can be difficult from getting all the necessary hardware, setting up the physical networking, and installing/configuring the software. To simplify the steps and get you up and running with your first cloud, we've put together this workshop. This workshop deploys a multi-node OpenStack cloud upon VirtualBox using Mirantis Fuel. 
 
++-----------------------------------+----------------+----+----+----+
+|                                   | OpenStack VM-1 | -2 | -3 | -4 |
++-----------------+-----------------+---------------------+----+----+
+|                 | OpenStack Ctrl  | OpenStack Compute-1 | -2 | -3 |
++-----------------+-----------------+---------------------+---------+
+|  Fuel-master VM | Fuel-slave-1 VM | Fuel-slave-2 VM     | -3 | +4 |
++---------------------------------------------------------+----+----+
+|                  VirtualBox Hypervisor                            |
+--------------------------------------------------------------------+
+|            Bare Metal Server 3GB, 120TB, 4 core Xeon              |
+|                        CentOS 7                                   |
++-------------------------------------------------------------------+
 ## Prerequisites
 
 For this lab, you'll need a desktop/labtop (Windows, Mac, or Linux) with an SSH client and a web browser.
@@ -37,7 +50,7 @@ It'll take about 8 minutes for the new server to start up.
 
 ## Log into the Bare Metal Server
 
-Using PuTTY (Windows) or ssh (Mac/Linux), connect to the new bare metal, physical server that was deployed. Refer to step #5 in the Packet guide above if you need help.
+Using PuTTY (Windows) or ssh (Mac/Linux), connect to the new bare metal, physical server that was deployed. Refer to step #5 in the Packet guide above if you need help. You'll be logging as as 'root' with no password required (SSH keys used instead of the password).
 
 When connecting using PuTTY on Windows, use the following instructions to login using the SSH key generated above.
 
@@ -49,6 +62,8 @@ When connecting using PuTTY on Windows, use the following instructions to login 
 
 ## Download and Run Install Scripts
 
+Once the you're logged in as root execute the following commands. The git command downloads the scripts to setup VirtualBox and Fuel. The "setup-fuel.sh" installs VirtualBox and downloads the Fuel scripts.
+
 * yum -y install git
 * git clone https://github.com/OpenStackSanDiego/openstack-fuel-virtualbox-packet
 * cd openstack-fuel-virtualbox-packet
@@ -56,18 +71,24 @@ When connecting using PuTTY on Windows, use the following instructions to login 
 
 ## Startup Fuel Servers
 
-This will launch 5 nodes
+With VirtualBox installed, the nodes that will run OpenStack can be started up. The "launch" command starts up the virtual servers which will be the nodes (controller and compute) that will make up the OpenStack cloud.
 
 * sh launch_16GB.sh
 
+At the conclusion, these scripts will have started a number of virtual servers within VirtualBox. These will become the nodes of the OpenStack cloud.
+
+This command will list the running virtual machines within VirtualBox. Append it with '-l' to get the details. You should see the Fuel master and several slaves.
+
+* VBoxManage list vms
+
 ## Log into Fuel
+
+VirtualBox sets up a number of networks inside the physical bare metal servers (vboxnet0, vboxnet1, vboxnet2). In order to connect from your local laptop to these virtual networks running in the server we setup some port forwarding (using socat) with the following command:
 
 * sh enable-port-forwarding.sh 
 
-Log into the Fuel console at:
+You can now log into the Fuel console (admin/admin):
 http://147.75.108.181:8001
-
-Login with admin/admin.
 
 ## Use Fuel to setup your first OpenStack cloud
 
@@ -75,7 +96,7 @@ From here you can proceed with the cloud installation instructions available at:
 
 https://docs.openstack.org/developer/fuel-docs/userdocs/fuel-user-guide.html
 
-Your first steps will be to assign node roles.
+Your first steps will be to assign node roles and go from there.
 
 ## Shutting it all down
 
