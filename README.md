@@ -39,13 +39,13 @@ It'll take about 8 minutes for the new server to start up.
 
 Using PuTTY (Windows) or ssh (Mac/Linux), connect to the new bare metal, physical server that was deployed. Refer to step #5 in the Packet guide above if you need help.
 
-When connecting using PuTTY on Windows, you'll need to login using the SSH key you generated.
+When connecting using PuTTY on Windows, use the following instructions to login using the SSH key generated above.
 
 * Click Connection > Data in the left-hand navigation pane and set the Auto-login username to root.
 
 * Click Connection > SSH > Auth in the left-hand navigation pane and configure the private key to use by clicking Browse under Private key file for authentication.
 
-Navigate to the location where you saved your private key earlier, select the file, and click Open.* 
+* Navigate to the location where you saved your private key earlier, select the file, and click Open.* 
 
 ## Download and Run Install Scripts
 
