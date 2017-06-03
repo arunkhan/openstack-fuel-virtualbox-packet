@@ -45,20 +45,20 @@ https://www.digitalocean.com/community/tutorials/how-to-use-ssh-keys-with-putty-
 
 ## Download and Run Install Scripts
 
-yum -y install git
-git clone https://github.com/OpenStackSanDiego/openstack-fuel-virtualbox-packet
-cd openstack-fuel-virtualbox-packet
-sh setup-fuel.sh
+* yum -y install git
+* git clone https://github.com/OpenStackSanDiego/openstack-fuel-virtualbox-packet
+* cd openstack-fuel-virtualbox-packet
+* sh setup-fuel.sh
 
 ## Startup Fuel Servers
 
 This will launch 5 nodes
 
-sh launch_16GB.sh
+* sh launch_16GB.sh
 
 ## Log into Fuel
 
-sh enable-port-forwarding.sh 
+* sh enable-port-forwarding.sh 
 
 Log into the Fuel console at:
 http://147.75.108.181:8001
