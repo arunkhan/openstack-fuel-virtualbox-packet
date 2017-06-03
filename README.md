@@ -5,7 +5,6 @@
 
 Starting up an OpenStack private cloud can be difficult from getting all the necessary hardware, setting up the physical networking, and installing/configuring the software. To simplify the steps and get you up and running with your first cloud, we've put together this workshop. This workshop deploys a multi-node OpenStack cloud upon VirtualBox using Mirantis Fuel. 
 
-+-----------------------------------+----------------+----+----+----+
 |                                   | OpenStack VM-1 | -2 | -3 | -4 |
 +-----------------+-----------------+---------------------+----+----+
 |                 | OpenStack Ctrl  | OpenStack Compute-1 | -2 | -3 |
