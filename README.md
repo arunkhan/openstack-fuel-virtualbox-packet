@@ -12,8 +12,8 @@ Starting up an OpenStack private cloud can be difficult from getting all the nec
 | zebra stripes | are neat      |    $1 |
 
 
-| A        | B           | C  | D | E | F | G | H |
-|----------|-------------|----|---|---|---|---|---|
+| A        | B           | C  | D | E |
+|----------|-------------|----|---|---|
 |                                   | OpenStack VM-1 | -2 | -3 | -4 |
 |                 | OpenStack Ctrl  | OpenStack Compute-1 | -2 | -3 |
 |  Fuel-master VM | Fuel-slave-1 VM | Fuel-slave-2 VM     | -3 | +4 |
