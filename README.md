@@ -17,7 +17,7 @@ Starting up an OpenStack private cloud can be difficult from getting all the nec
 
 ## Prerequisites
 
-For this lab, you'll need a desktop/labtop (Windows, Mac, or Linux) with an SSH client and a web browser.
+For this lab, you'll need a desktop/laptop (Windows, Mac, or Linux) with an SSH client and a web browser.
 
 You can download PuTTY, an SSH client for Windows at:
 
@@ -37,6 +37,13 @@ Packet has instructions on how to startup your first server.
 You'll want to deploy a 'Type 1' server. Pick whichever region you'd like (New Jersey or California).
 
 https://help.packet.net/quick-start/deploy-a-server
+
+After creating a project make sure to use the following settings for deploying the server
+
+Hostname: <your hostname>
+Project:  <project name>
+Config:  Type I
+OS:  CentOS 7
 
 If you are connecting from a Windows machine, you can use these instructions on how to generate SSH keys.
 
@@ -66,6 +73,7 @@ Once the you're logged in as root execute the following commands. The git comman
 * git clone https://github.com/OpenStackSanDiego/openstack-fuel-virtualbox-packet
 * cd openstack-fuel-virtualbox-packet
 * sh setup-fuel.sh
+** Enter "yes" when asked "replace READ.md?"
 
 ## Startup Fuel Servers
 
@@ -85,8 +93,7 @@ VirtualBox sets up a number of networks inside the physical bare metal servers (
 
 * sh enable-port-forwarding.sh 
 
-You can now log into the Fuel console (admin/admin):
-http://147.75.108.181:8001
+You can now log into the Fuel console (admin/admin): http://<your IP address>:8000
 
 ## Use Fuel to setup your first OpenStack cloud
 
