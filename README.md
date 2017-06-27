@@ -99,9 +99,9 @@ You can now log into the Fuel console (admin/admin): http://<your IP address>:80
 
 From here you can proceed with the cloud installation instructions available at:
 
-https://docs.openstack.org/developer/fuel-docs/userdocs/fuel-user-guide.html
+https://docs.openstack.org/developer/fuel-docs/userdocs/fuel-user-guide/create-environment/start-create-env.html
 
-Your first steps will be to assign node roles and go from there.
+Be sure to use your IP address (see above) to login rather than the IP listed in the guide.
 
 ## Shutting it all down
 
