@@ -77,8 +77,7 @@ Once the you're logged in as root execute the following commands. The git comman
 * yum -y install git
 * git clone https://github.com/OpenStackSanDiego/openstack-fuel-virtualbox-packet
 * cd openstack-fuel-virtualbox-packet
-* sh setup-fuel.sh
-** Enter "yes" when asked "replace READ.md?"
+* sh setup-fuel.sh   (Enter "yes" when asked "replace READ.md?")
 
 ## Startup Fuel Servers
 
