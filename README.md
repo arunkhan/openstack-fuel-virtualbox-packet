@@ -40,10 +40,15 @@ https://help.packet.net/quick-start/deploy-a-server
 
 After creating a project make sure to use the following settings for deploying the server
 
-Hostname: <your hostname>
-Project:  <project name>
+Hostname: Fuel
+
+Project:  Your Project Name
+
 Config:  Type I
+
 OS:  CentOS 7
+
+Location: Parsippany, NJ 
 
 If you are connecting from a Windows machine, you can use these instructions on how to generate SSH keys.
 
@@ -72,8 +77,7 @@ Once the you're logged in as root execute the following commands. The git comman
 * yum -y install git
 * git clone https://github.com/OpenStackSanDiego/openstack-fuel-virtualbox-packet
 * cd openstack-fuel-virtualbox-packet
-* sh setup-fuel.sh
-** Enter "yes" when asked "replace READ.md?"
+* sh setup-fuel.sh   (Enter "yes" when asked "replace READ.md?")
 
 ## Startup Fuel Servers
 
