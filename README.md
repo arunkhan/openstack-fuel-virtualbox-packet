@@ -42,11 +42,13 @@ After creating a project make sure to use the following settings for deploying t
 
 Hostname: Fuel
 
-Project:  <project name>
+Project:  Your Project Name
 
 Config:  Type I
 
 OS:  CentOS 7
+
+Location: Parsippany, NJ 
 
 If you are connecting from a Windows machine, you can use these instructions on how to generate SSH keys.
 
