@@ -85,6 +85,10 @@ With VirtualBox installed, the nodes that will run OpenStack can be started up. 
 
 * sh launch_16GB.sh
 
+Be patient, this may take a while when you see the following in your ssh console.
+
+        Waiting for product VM to install. Please do NOT abort the script...
+        
 At the conclusion, these scripts will have started a number of virtual servers within VirtualBox. These will become the nodes of the OpenStack cloud.
 
 This command will list the running virtual machines within VirtualBox. Append it with '-l' to get the details. You should see the Fuel master and several slaves.
@@ -97,7 +101,9 @@ VirtualBox sets up a number of networks inside the physical bare metal servers (
 
 * sh enable-port-forwarding.sh 
 
-You can now log into the Fuel console (admin/admin): http://<your IP address>:8000
+You can now log into the Fuel console (admin/admin): http://<public_IP_of_baremetal>:8000
+
+**WARNING** - you should login to the Fuel console **immediately** after completion of the script. Otherwise bad guys may get in and play havoc with your setup!
 
 ## Use Fuel to setup your first OpenStack cloud
 
