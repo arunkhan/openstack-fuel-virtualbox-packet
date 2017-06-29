@@ -40,9 +40,12 @@ https://help.packet.net/quick-start/deploy-a-server
 
 After creating a project make sure to use the following settings for deploying the server
 
-Hostname: <your hostname>
+Hostname: Fuel
+
 Project:  <project name>
+
 Config:  Type I
+
 OS:  CentOS 7
 
 If you are connecting from a Windows machine, you can use these instructions on how to generate SSH keys.
